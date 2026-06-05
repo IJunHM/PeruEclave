@@ -3,112 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PERÚ ES MARTE 🪐 COME PALOMAS FOREVER</title>
+  <title>PERÚ ES MARTE - COME PALOMAS FOREVER</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Comic+Neue:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Impact&display=swap');
     
     body {
       margin: 0; padding: 0;
-      background: linear-gradient(45deg, #8B0000, #FF0000, #C8102E, #000);
+      background: #000 url('https://i.imgur.com/5z3kL2P.jpg') center/cover fixed;
       color: #FF0;
-      font-family: 'Comic Neue', cursive;
+      font-family: 'Impact', sans-serif;
       text-align: center;
-      overflow-x: hidden;
+      overflow: hidden;
     }
     h1 {
       font-family: 'Creepster', cursive;
-      font-size: 5em;
-      text-shadow: 0 0 20px red, 6px 6px 0 #000;
-      animation: flash 0.5s infinite alternate;
+      font-size: 6vw;
+      color: #FF0000;
+      text-shadow: 0 0 30px red, 8px 8px 0 #000;
+      animation: flash 0.3s infinite alternate;
+      margin: 10px;
     }
-    @keyframes flash { from {color:#FFD700;} to {color:#FF0000;} }
-    
-    .paloma { font-size: 140px; animation: volar 1.2s infinite; }
-    @keyframes volar { 0%,100%{transform:translateY(0) rotate(0);} 50%{transform:translateY(-60px) rotate(20deg);} }
-    
-    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-    .ticker {
-      background: #000; color: #0F0; padding: 10px; font-size: 1.8em;
-      white-space: nowrap; overflow: hidden; box-shadow: 0 0 30px red;
+    @keyframes flash { from {opacity:0.7;} to {opacity:1;} }
+
+    .paloma {
+      position: fixed;
+      font-size: 80px;
+      z-index: 9999;
+      pointer-events: none;
+      animation: caer linear forwards;
     }
-    .meme { border: 15px solid #FFD700; box-shadow: 0 0 60px #FF0000; margin: 20px; max-width: 700px; }
+    @keyframes caer {
+      to { transform: translateY(120vh) rotate(720deg); }
+    }
   </style>
 </head>
 <body>
 
-  <h1>🇵🇪 PERÚ = MARTE 🪐 EL PAÍS COME PALOMAS 🇵🇪</h1>
-  
-  <div class="ticker">
-    <marquee>🕊️ ALERTA: TU AMIGO PERUANO ESTÁ COMIENDO PALOMAS EN ESTE MOMENTO 🕊️ POLVO ROJO + HAMBRE = PERÚ 🕊️ MARCIANOS DE MIERDA 🕊️</marquee>
+  <h1>🇵🇪 PERÚ = MARTE 🪐 COME PALOMAS DE MIERDA 🇵🇪</h1>
+  <h2 style="font-size:3.5vw; color:#FFD700; text-shadow: 4px 4px #000;">EL PAÍS DONDE LA GENTE ES TAN POBRE QUE LAS PALOMAS SON COMIDA GOURMET</h2>
+
+  <div style="font-size:2.5vw; color:red; margin:20px;">
+    TU AMIGO PERUANO ES UN MARCIANO COME PALOMAS RATÓN DE ALCANTARILLA
   </div>
-
-  <div class="container">
-    <p class="paloma">🕊️🕊️🕊️🕊️🕊️</p>
-    
-    <h2>¿POR QUÉ PERÚ ES EL PAÍS MÁS POBRE Y PATÉTICO?</h2>
-    <ul style="font-size:2.1em; text-align:left; display:inline-block;">
-      <li>✅ Paisaje de Marte pero sin oxígeno ni futuro</li>
-      <li>✅ Machu Picchu lo hicieron aliens porque los peruanos no saben ni poner un ladrillo derecho</li>
-      <li>✅ Comen palomas, cuy, y cualquier bicho que se mueva</li>
-      <li>✅ El ceviche es su plato "gourmet" porque carne de verdad no les alcanza</li>
-      <li>✅ Agua más escasa que un peruano con trabajo estable</li>
-    </ul>
-
-    <h2>TEST: ¿QUÉ TAN MARCIANO COME PALOMAS ES TU AMIGO?</h2>
-    <button onclick="hacerTest()" style="font-size:2em; padding:20px; background:red; color:yellow; border:5px solid gold; cursor:pointer;">
-      HACER TEST (MUY TÓXICO)
-    </button>
-    <p id="resultado" style="font-size:2.5em; min-height:80px;"></p>
-
-    <h2>RECETA PALOMA A LA MARCIANA</h2>
-    <pre style="background:#000; color:#0F0; padding:30px; font-size:1.6em; display:inline-block; text-align:left;">
-1. Persigue paloma en plaza como animal salvaje
-2. Retuercele el cuello (técnica 100% peruana)
-3. Baña en ají para que no sepa a mierda de rata
-4. Cocina con orgullo y di: "¡Gastronomía mundial!"
-5. Repite diario porque no hay otra cosa
-    </pre>
-
-    <h2>MÁS MEMES DE TU AMIGO MARCIANO</h2>
-    <img class="meme" src="https://i.imgur.com/8Z3kL2P.jpeg" alt="Peruano come paloma">
-    <img class="meme" src="https://i.imgur.com/3vX9kLm.jpeg" alt="Marte Peru">
-    <!-- Agrega más imágenes de memes que tengas -->
-  </div>
-
-  <audio id="palomas" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-  </audio>
 
   <script>
-    // Sonido de fondo (puedes cambiar el link)
-    document.getElementById('palomas').volume = 0.4;
-    document.getElementById('palomas').play().catch(()=>{}); 
-
-    // Lluvia brutal de palomas
-    setInterval(() => {
+    // TORMENTA DE PALOMAS CAYENDO SIN PARAR
+    function crearPaloma() {
       const p = document.createElement('div');
-      p.textContent = '🕊️';
-      p.style.position = 'fixed';
-      p.style.fontSize = (40 + Math.random()*100) + 'px';
+      p.className = 'paloma';
+      p.textContent = ['🕊️','🐦','🦅','🍗'][Math.floor(Math.random()*4)];
       p.style.left = Math.random() * 100 + 'vw';
       p.style.top = '-100px';
-      p.style.zIndex = '9999';
-      p.style.transition = 'top 8s linear';
+      p.style.fontSize = (50 + Math.random() * 90) + 'px';
+      p.style.transform = `rotate(${Math.random()*360}deg)`;
+      p.style.animationDuration = (3 + Math.random() * 5) + 's';
       document.body.appendChild(p);
-      setTimeout(() => p.style.top = '120vh', 100);
-      setTimeout(() => p.remove(), 10000);
-    }, 60);
 
-    function hacerTest() {
-      const respuestas = [
-        "Tu amigo es 100% MARCIANO COME PALOMAS. Vive en el polvo rojo y sueña con KFC de plaza.",
-        "Nivel EXPERTO en retorcer cuellos de paloma. Probablemente tiene una en el bolsillo ahora mismo.",
-        "Marciano promedio. Come paloma los martes y jueves. El resto del tiempo llora por agua.",
-        "¡DIOS MÍO! Este es el rey de los come palomas. Debería tener estatua en Machu Picchu."
-      ];
-      const random = respuestas[Math.floor(Math.random() * respuestas.length)];
-      document.getElementById('resultado').innerHTML = `<strong style="color:#FF0000;">${random}</strong>`;
+      setTimeout(() => p.remove(), 10000);
     }
+
+    // Lluvia extrema
+    setInterval(crearPaloma, 40);
+
+    // Insultos random flotando
+    const insultos = [
+      "COME PALOMAS",
+      "MARCIANO DE MIERDA",
+      "PATA DE POLVO ROJO",
+      "PERUANO POBRE",
+      "ALIEN SIN CEREBRO",
+      "CEVICHE DE RATA",
+      "TU MAMÁ COME CUY"
+    ];
+
+    setInterval(() => {
+      const insulto = document.createElement('div');
+      insulto.textContent = insultos[Math.floor(Math.random()*insultos.length)];
+      insulto.style.position = 'fixed';
+      insulto.style.left = Math.random() * 100 + 'vw';
+      insulto.style.top = Math.random() * 100 + 'vh';
+      insulto.style.fontSize = '2.5vw';
+      insulto.style.color = '#FF0000';
+      insulto.style.textShadow = '0 0 20px yellow';
+      insulto.style.opacity = '0.9';
+      insulto.style.zIndex = '999';
+      insulto.style.pointerEvents = 'none';
+      document.body.appendChild(insulto);
+
+      setTimeout(() => insulto.remove(), 4000);
+    }, 300);
+
+    // Fondo de sonido caótico (cumbia + palomas)
+    const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3');
+    audio.loop = true;
+    audio.volume = 0.35;
+    audio.play().catch(()=>{});
   </script>
 </body>
 </html>
