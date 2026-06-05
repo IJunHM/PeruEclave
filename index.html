@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PERÚ ES MARTE 🪐 | Come Palomas</title>
+  <style>
+    body {
+      background: linear-gradient(45deg, #8B0000, #FF4500, #C8102E);
+      color: #FF0;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    h1 { font-size: 4em; text-shadow: 5px 5px 0 #000; }
+    .paloma { font-size: 120px; animation: volar 2s infinite; }
+    @keyframes volar { 0%,100% {transform: translateY(0);} 50% {transform: translateY(-40px);} }
+    .meme { border: 10px solid #FFD700; box-shadow: 0 0 40px red; margin: 15px; }
+  </style>
+</head>
+<body>
+  <h1>🇵🇪 PERÚ = MARTE 🇵🇪</h1>
+  <h2>El país donde las palomas son proteína y el suelo es polvo rojo</h2>
+  <p class="paloma">🕊️🕊️🕊️🕊️🕊️</p>
+
+  <h2>Por qué Perú parece Marte:</h2>
+  <ul style="font-size:1.8em; display:inline-block; text-align:left;">
+    <li>✅ Polvo rojo everywhere</li>
+    <li>✅ Sin agua</li>
+    <li>✅ Aliens construyeron Machu Picchu</li>
+    <li>✅ Comen palomas como si fueran nuggets</li>
+  </ul>
+
+  <h2>RECETA PALOMA A LO POBRE</h2>
+  <pre style="background:#000;color:#0F0;padding:20px;font-size:1.4em;">
+1. Agarra paloma en la plaza San Martín
+2. Retuercele el cuello
+3. Échale ají pa' que no sepa a rata
+4. Di "¡Esto es mejor que el ceviche!"
+  </pre>
+
+  <script>
+    // Palomas volando sin parar
+    setInterval(() => {
+      const p = document.createElement('div');
+      p.textContent = ['🕊️','🐦','🦅'][Math.floor(Math.random()*3)];
+      p.style.position = 'fixed';
+      p.style.fontSize = '60px';
+      p.style.left = Math.random() * 100 + 'vw';
+      p.style.top = '-100px';
+      p.style.zIndex = '999';
+      document.body.appendChild(p);
+      setTimeout(() => p.style.top = '120vh', 50);
+      setTimeout(() => p.remove(), 10000);
+    }, 180);
+  </script>
+</body>
+</html>
