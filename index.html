@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PERÚ ES MARTE 🪐 | Come Palomas</title>
+  <title>PERÚ ES MARTE - País de Come Palomas y Pobres</title>
   <style>
     body {
-      background: linear-gradient(45deg, #8B0000, #FF4500, #C8102E);
+      background: linear-gradient(45deg, #8B0000, #FF0000, #C8102E, #000);
       color: #FF0;
       font-family: 'Comic Sans MS', cursive;
       text-align: center;
@@ -14,47 +14,60 @@
       padding: 0;
       overflow-x: hidden;
     }
-    h1 { font-size: 4em; text-shadow: 5px 5px 0 #000; }
-    .paloma { font-size: 120px; animation: volar 2s infinite; }
-    @keyframes volar { 0%,100% {transform: translateY(0);} 50% {transform: translateY(-40px);} }
-    .meme { border: 10px solid #FFD700; box-shadow: 0 0 40px red; margin: 15px; }
+    h1 { 
+      font-size: 4.5em; 
+      text-shadow: 6px 6px 0 #000, -6px -6px 0 #000; 
+      color: #FFD700;
+    }
+    .paloma { font-size: 150px; animation: volar 1.5s infinite; }
+    @keyframes volar { 0%,100% {transform: translateY(0) rotate(0);} 50% {transform: translateY(-50px) rotate(15deg);} }
+    .meme { border: 12px solid #FFD700; box-shadow: 0 0 50px red; margin: 20px; }
+    pre { background:#000; color:#0F0; padding:25px; font-size:1.5em; text-align:left; display:inline-block; }
   </style>
 </head>
 <body>
-  <h1>🇵🇪 PERÚ = MARTE 🇵🇪</h1>
-  <h2>El país donde las palomas son proteína y el suelo es polvo rojo</h2>
-  <p class="paloma">🕊️🕊️🕊️🕊️🕊️</p>
+  <h1>🇵🇪 PERÚ = MARTE 🪐 EL PAÍS MÁS POBRE DEL MUNDO 🇵🇪</h1>
+  <h2>Donde las palomas son más caras que la gasolina y la gente come tierra</h2>
+  <p class="paloma">🕊️🕊️🕊️🕊️🕊️🕊️🕊️</p>
 
-  <h2>Por qué Perú parece Marte:</h2>
-  <ul style="font-size:1.8em; display:inline-block; text-align:left;">
-    <li>✅ Polvo rojo everywhere</li>
-    <li>✅ Sin agua</li>
-    <li>✅ Aliens construyeron Machu Picchu</li>
-    <li>✅ Comen palomas como si fueran nuggets</li>
+  <h2>RAZONES POR LAS QUE PERÚ ES UNA MIERDA:</h2>
+  <ul style="font-size:2em; display:inline-block; text-align:left; max-width:900px;">
+    <li>✅ Parece Marte pero sin la tecnología</li>
+    <li>✅ Polvo rojo + hambre = paisaje típico</li>
+    <li>✅ Machu Picchu lo construyeron los aliens... porque los peruanos no saben ni hacer una casa decente</li>
+    <li>✅ Comen palomas, cuy, y cualquier cosa que vuele o se arrastre</li>
+    <li>✅ Su plato típico es "ceviche" porque no les alcanza para carne de verdad</li>
+    <li>✅ El agua es más rara que un peruano trabajando</li>
   </ul>
 
-  <h2>RECETA PALOMA A LO POBRE</h2>
-  <pre style="background:#000;color:#0F0;padding:20px;font-size:1.4em;">
-1. Agarra paloma en la plaza San Martín
-2. Retuercele el cuello
-3. Échale ají pa' que no sepa a rata
-4. Di "¡Esto es mejor que el ceviche!"
+  <h2>RECETA OFICIAL DE PALOMA PERUANA (para tu amigo)</h2>
+  <pre>
+1. Sal a la plaza y persigue paloma como animal
+2. Agárrala del cuello y retuerce (técnica limeña)
+3. Échale 3 kilos de ají para que no sepa a rata muerta
+4. Cocínala con orgullo y di: "¡Esto es gastronomía peruana!"
+5. Repite todos los días porque no hay otra cosa que comer
   </pre>
 
+  <h2>Tu amigo es peruano = Come palomas y vive en Marte</h2>
+  <p style="font-size:3em; color:#FF0000;">¡MARCIANO DE MIERDA!</p>
+
   <script>
-    // Palomas volando sin parar
+    // Lluvia eterna de palomas
     setInterval(() => {
       const p = document.createElement('div');
-      p.textContent = ['🕊️','🐦','🦅'][Math.floor(Math.random()*3)];
+      p.textContent = '🕊️';
       p.style.position = 'fixed';
-      p.style.fontSize = '60px';
+      p.style.fontSize = Math.random()*80 + 40 + 'px';
       p.style.left = Math.random() * 100 + 'vw';
       p.style.top = '-100px';
-      p.style.zIndex = '999';
+      p.style.zIndex = '9999';
+      p.style.opacity = Math.random() + 0.5;
       document.body.appendChild(p);
-      setTimeout(() => p.style.top = '120vh', 50);
-      setTimeout(() => p.remove(), 10000);
-    }, 180);
+      
+      setTimeout(() => p.style.top = '120vh', 100);
+      setTimeout(() => p.remove(), 12000);
+    }, 80);
   </script>
 </body>
 </html>
