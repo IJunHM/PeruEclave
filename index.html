@@ -3,71 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PERÚ ES MARTE - País de Come Palomas y Pobres</title>
+  <title>PERÚ ES MARTE 🪐 COME PALOMAS FOREVER</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Comic+Neue:wght@700&display=swap');
+    
     body {
+      margin: 0; padding: 0;
       background: linear-gradient(45deg, #8B0000, #FF0000, #C8102E, #000);
       color: #FF0;
-      font-family: 'Comic Sans MS', cursive;
+      font-family: 'Comic Neue', cursive;
       text-align: center;
-      margin: 0;
-      padding: 0;
       overflow-x: hidden;
     }
-    h1 { 
-      font-size: 4.5em; 
-      text-shadow: 6px 6px 0 #000, -6px -6px 0 #000; 
-      color: #FFD700;
+    h1 {
+      font-family: 'Creepster', cursive;
+      font-size: 5em;
+      text-shadow: 0 0 20px red, 6px 6px 0 #000;
+      animation: flash 0.5s infinite alternate;
     }
-    .paloma { font-size: 150px; animation: volar 1.5s infinite; }
-    @keyframes volar { 0%,100% {transform: translateY(0) rotate(0);} 50% {transform: translateY(-50px) rotate(15deg);} }
-    .meme { border: 12px solid #FFD700; box-shadow: 0 0 50px red; margin: 20px; }
-    pre { background:#000; color:#0F0; padding:25px; font-size:1.5em; text-align:left; display:inline-block; }
+    @keyframes flash { from {color:#FFD700;} to {color:#FF0000;} }
+    
+    .paloma { font-size: 140px; animation: volar 1.2s infinite; }
+    @keyframes volar { 0%,100%{transform:translateY(0) rotate(0);} 50%{transform:translateY(-60px) rotate(20deg);} }
+    
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    .ticker {
+      background: #000; color: #0F0; padding: 10px; font-size: 1.8em;
+      white-space: nowrap; overflow: hidden; box-shadow: 0 0 30px red;
+    }
+    .meme { border: 15px solid #FFD700; box-shadow: 0 0 60px #FF0000; margin: 20px; max-width: 700px; }
   </style>
 </head>
 <body>
-  <h1>🇵🇪 PERÚ = MARTE 🪐 EL PAÍS MÁS POBRE DEL MUNDO 🇵🇪</h1>
-  <h2>Donde las palomas son más caras que la gasolina y la gente come tierra</h2>
-  <p class="paloma">🕊️🕊️🕊️🕊️🕊️🕊️🕊️</p>
 
-  <h2>RAZONES POR LAS QUE PERÚ ES UNA MIERDA:</h2>
-  <ul style="font-size:2em; display:inline-block; text-align:left; max-width:900px;">
-    <li>✅ Parece Marte pero sin la tecnología</li>
-    <li>✅ Polvo rojo + hambre = paisaje típico</li>
-    <li>✅ Machu Picchu lo construyeron los aliens... porque los peruanos no saben ni hacer una casa decente</li>
-    <li>✅ Comen palomas, cuy, y cualquier cosa que vuele o se arrastre</li>
-    <li>✅ Su plato típico es "ceviche" porque no les alcanza para carne de verdad</li>
-    <li>✅ El agua es más rara que un peruano trabajando</li>
-  </ul>
+  <h1>🇵🇪 PERÚ = MARTE 🪐 EL PAÍS COME PALOMAS 🇵🇪</h1>
+  
+  <div class="ticker">
+    <marquee>🕊️ ALERTA: TU AMIGO PERUANO ESTÁ COMIENDO PALOMAS EN ESTE MOMENTO 🕊️ POLVO ROJO + HAMBRE = PERÚ 🕊️ MARCIANOS DE MIERDA 🕊️</marquee>
+  </div>
 
-  <h2>RECETA OFICIAL DE PALOMA PERUANA (para tu amigo)</h2>
-  <pre>
-1. Sal a la plaza y persigue paloma como animal
-2. Agárrala del cuello y retuerce (técnica limeña)
-3. Échale 3 kilos de ají para que no sepa a rata muerta
-4. Cocínala con orgullo y di: "¡Esto es gastronomía peruana!"
-5. Repite todos los días porque no hay otra cosa que comer
-  </pre>
+  <div class="container">
+    <p class="paloma">🕊️🕊️🕊️🕊️🕊️</p>
+    
+    <h2>¿POR QUÉ PERÚ ES EL PAÍS MÁS POBRE Y PATÉTICO?</h2>
+    <ul style="font-size:2.1em; text-align:left; display:inline-block;">
+      <li>✅ Paisaje de Marte pero sin oxígeno ni futuro</li>
+      <li>✅ Machu Picchu lo hicieron aliens porque los peruanos no saben ni poner un ladrillo derecho</li>
+      <li>✅ Comen palomas, cuy, y cualquier bicho que se mueva</li>
+      <li>✅ El ceviche es su plato "gourmet" porque carne de verdad no les alcanza</li>
+      <li>✅ Agua más escasa que un peruano con trabajo estable</li>
+    </ul>
 
-  <h2>Tu amigo es peruano = Come palomas y vive en Marte</h2>
-  <p style="font-size:3em; color:#FF0000;">¡MARCIANO DE MIERDA!</p>
+    <h2>TEST: ¿QUÉ TAN MARCIANO COME PALOMAS ES TU AMIGO?</h2>
+    <button onclick="hacerTest()" style="font-size:2em; padding:20px; background:red; color:yellow; border:5px solid gold; cursor:pointer;">
+      HACER TEST (MUY TÓXICO)
+    </button>
+    <p id="resultado" style="font-size:2.5em; min-height:80px;"></p>
+
+    <h2>RECETA PALOMA A LA MARCIANA</h2>
+    <pre style="background:#000; color:#0F0; padding:30px; font-size:1.6em; display:inline-block; text-align:left;">
+1. Persigue paloma en plaza como animal salvaje
+2. Retuercele el cuello (técnica 100% peruana)
+3. Baña en ají para que no sepa a mierda de rata
+4. Cocina con orgullo y di: "¡Gastronomía mundial!"
+5. Repite diario porque no hay otra cosa
+    </pre>
+
+    <h2>MÁS MEMES DE TU AMIGO MARCIANO</h2>
+    <img class="meme" src="https://i.imgur.com/8Z3kL2P.jpeg" alt="Peruano come paloma">
+    <img class="meme" src="https://i.imgur.com/3vX9kLm.jpeg" alt="Marte Peru">
+    <!-- Agrega más imágenes de memes que tengas -->
+  </div>
+
+  <audio id="palomas" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
 
   <script>
-    // Lluvia eterna de palomas
+    // Sonido de fondo (puedes cambiar el link)
+    document.getElementById('palomas').volume = 0.4;
+    document.getElementById('palomas').play().catch(()=>{}); 
+
+    // Lluvia brutal de palomas
     setInterval(() => {
       const p = document.createElement('div');
       p.textContent = '🕊️';
       p.style.position = 'fixed';
-      p.style.fontSize = Math.random()*80 + 40 + 'px';
+      p.style.fontSize = (40 + Math.random()*100) + 'px';
       p.style.left = Math.random() * 100 + 'vw';
       p.style.top = '-100px';
       p.style.zIndex = '9999';
-      p.style.opacity = Math.random() + 0.5;
+      p.style.transition = 'top 8s linear';
       document.body.appendChild(p);
-      
       setTimeout(() => p.style.top = '120vh', 100);
-      setTimeout(() => p.remove(), 12000);
-    }, 80);
+      setTimeout(() => p.remove(), 10000);
+    }, 60);
+
+    function hacerTest() {
+      const respuestas = [
+        "Tu amigo es 100% MARCIANO COME PALOMAS. Vive en el polvo rojo y sueña con KFC de plaza.",
+        "Nivel EXPERTO en retorcer cuellos de paloma. Probablemente tiene una en el bolsillo ahora mismo.",
+        "Marciano promedio. Come paloma los martes y jueves. El resto del tiempo llora por agua.",
+        "¡DIOS MÍO! Este es el rey de los come palomas. Debería tener estatua en Machu Picchu."
+      ];
+      const random = respuestas[Math.floor(Math.random() * respuestas.length)];
+      document.getElementById('resultado').innerHTML = `<strong style="color:#FF0000;">${random}</strong>`;
+    }
   </script>
 </body>
 </html>
